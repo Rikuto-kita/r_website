@@ -1,0 +1,26 @@
+<!-- staticをロードする -->
+{% load static %}
+
+<!doctype HTML>
+<html>
+
+    <head>
+        <!-- CSSを読み込む記述、ここではmain.cssを読み込む。{% フォルダ名　'CSSファイル名'} -->
+        <link rel="stylesheet" href="{% static 'main.css' %} ">
+
+    </head>
+
+    <body>
+        <div class = "navber">
+            <a href = "/">ホーム</a>
+            <a href = "about/">自己紹介</a>
+        </div>
+        {% block base %}
+        {% endblock %}
+        <div>
+            <p>Copylight 2015-{% now "Y"%}</p>
+        </div>
+
+    </body>
+
+</html>

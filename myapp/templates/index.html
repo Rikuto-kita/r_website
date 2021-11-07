@@ -1,1 +1,13 @@
-<h1>hellow</h1>
+
+{% extends "base.html" %}
+
+{% block base %}
+{% if username == "kita" %}
+<h1>自分です</h1>  
+{% elif username %}
+<h1>{{username}}さんようこそ！</h1>  
+{% else %}
+<h1>ゲストさんようこそ！</h1>  
+{% endif %}
+<img src="{static '秋イス.6f052eb6534e.jpeg'}"/>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+<!-- intcommaのためのロード、設定ファイルのアプリにも追加表記必須-->
+{% load humanize %}
+
+{% block base %}
+<h1>自己紹介</h1>  
+<h2>実績</h2>
+3桁ずつコンマをつけるフィルタ
+<p>{% now "Y年m月d日 H時i分" %}現在までに{{ num_services | intcomma }}個のサービスをつくりました！</p>
+<h2>スキル</h2>
+<ul>
+  {% for skill in skills %}
+  <li>{{skill}}</li>
+  {% empty %}
+  <li>スキルがありません</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
