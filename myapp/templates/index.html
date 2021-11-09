@@ -1,5 +1,5 @@
-
 {% extends "base.html" %}
+{% load static %} 
 
 {% block base %}
 {% if username == "kita" %}
@@ -9,5 +9,5 @@
 {% else %}
 <h1>ゲストさんようこそ！</h1>  
 {% endif %}
-<img src="{static '秋イス.6f052eb6534e.jpeg'}"/>
+<img src="{% static '秋イス.jpeg' %}"/>
 {% endblock %}
